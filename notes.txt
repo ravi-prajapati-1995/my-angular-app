@@ -1,0 +1,30 @@
+What is angular?
+Angular is fronend javascript framework
+2. Why use angular?
+ans: It simplifies the process of building complex, interactive web user interface
+  1. Write declarative code
+  2. separation  of concerns via components
+  3. Custom HTML components
+  4. OOPS concepts and Principle can be used
+  5. Angular use typescript
+
+
+To create project in angular after installing npm and
+1. Install angular cli: npm install -g @angular/cli (it install angular cli globally on our system)
+2. After installing run : ng new my-angular-app
+
+
+Files that are at top level of the project are the configuration files
+files with tsconfig are the typescript configuration files
+  these tsconfig files controls how typescript code will be compiled to javascript code
+
+package*.json
+  which helps to mange dependency of the project
+
+angular.json
+  which contains extra configuration setting information for angular CLI
+
+main.ts -> This file is the main file that will load when anyone visit our site
+assets -> This folder is having images, like logos
+
+npm start -> this will trigger ng serve under the hook
