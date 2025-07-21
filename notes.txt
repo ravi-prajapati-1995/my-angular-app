@@ -29,4 +29,13 @@ assets -> This folder is having images, like logos
 
 npm start -> this will trigger ng serve under the hook
 
-Test git
+@Component is the TS feature, this is provided by the angular which converts normal class into
+angular component, when add to any class
+  selector: app-root -> it tells the angular to look for thee app-root tag to replace with the markup that is
+  provided by this component in templateUrl
+  styleUrl: To apply the css for this component only we will provide css using this property
+
+
+export class [className] --  Here Export will be used so that other files can use this component
+in @component we set standalone: true, because in earlier version of angular there are only module based components
+standalone components added later
