@@ -60,5 +60,14 @@ we write: <button (click)="onSelectUser()">  here onSelectUser is the method tha
 Two approaches for updating State:
 1. Relaying on zone.js which detects possible change when we do something on the screen: from angular 2
 2. Signals: This will notify angular about value change and required UI updated
-  There are multiple syntex updates using signals, look at user.components.html
+  There are multiple syntax updates using signals, look at user.components.html
+
+We can also transfer data from one component to another component, like we are sending data from app component
+to user component in this
+
+<app-user [name] = "user.name"> : here we will send name as user.name, user we are reading from json file of users
+to accept this name in user component we added @Input name!String;
+
+in user component typescript file if we mark @Input({required: true}) then that property will be required when sending
+data from other component
 
