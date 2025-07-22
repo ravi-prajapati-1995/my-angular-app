@@ -71,3 +71,12 @@ to accept this name in user component we added @Input name!String;
 in user component typescript file if we mark @Input({required: true}) then that property will be required when sending
 data from other component
 
+we can also use signals for input values from other component
+i.e avatar = input<string>() or avatar = input.required() -- for required
+
+Signals can't be updated where they are used as input
+
+if we want to send some data from child component to parent in our case from user component to app component
+then we can use @Output() select = new EventEmitter(), and to send value we can use select.emit([anyValue])
+and in the parent template we need to hand over this value in ts to do that: (select)="onSelectUser($event)"
+
