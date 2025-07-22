@@ -39,3 +39,26 @@ angular component, when add to any class
 export class [className] --  Here Export will be used so that other files can use this component
 in @component we set standalone: true, because in earlier version of angular there are only module based components
 standalone components added later
+
+main.ts: When our application start which components will be loaded initially that should be defined in this file
+i.e we have new header component if we want to load it when application starts we need to define it in main.ts file
+
+In main.ts we should only call the app component we should nested other component in the app component
+
+If we want to use other component in the any component we need to import that component using import in @component
+
+To create new component:
+ng generate component [component-name] / short cut: ng g c [component-name]
+
+To bind the variables in angular from component we can use two way:
+1. String interoplation using {{ variableName.property }} we can use public property in the template
+2. Property Binding like src in user.component.html [src] = "variabeName.property"
+
+To add event listener when we click on the button like on click
+we write: <button (click)="onSelectUser()">  here onSelectUser is the method that will be called when user click
+
+Two approaches for updating State:
+1. Relaying on zone.js which detects possible change when we do something on the screen: from angular 2
+2. Signals: This will notify angular about value change and required UI updated
+  There are multiple syntex updates using signals, look at user.components.html
+
