@@ -1,0 +1,11 @@
+To bind the variables in angular from component we can use two way:
+1. String interoplation using {{ variableName.property }} we can use public property in the template
+2. Property Binding like src in user.component.html [src] = "variabeName.property"
+
+To add event listener when we click on the button like on click
+we write: <button (click)="onSelectUser()">  here onSelectUser is the method that will be called when user click
+
+Two approaches for updating State:
+1. Relaying on zone.js which detects possible change when we do something on the screen: from angular 2
+2. Signals: This will notify angular about value change and required UI updated
+  There are multiple syntax updates using signals, look at user.components.html

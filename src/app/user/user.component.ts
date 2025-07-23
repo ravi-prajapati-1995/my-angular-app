@@ -1,4 +1,4 @@
-import {Component, computed, EventEmitter, input, Input, Output} from '@angular/core';
+import {Component, computed, EventEmitter, input, Input, output, Output} from '@angular/core';
 import {DUMMY_USERS} from "../dummy-users";
 
 // const randomIdx = Math.floor(Math.random() * DUMMY_USERS.length)
@@ -13,13 +13,7 @@ export class UserComponent {
   @Input({required: true}) id!: string;
   @Input({required: true}) avtar!: string;
   @Input({required: true}) name!: string;
-  @Output() select = new EventEmitter()
-
-  //with signal below code
-  /* avtar = input<string>()
-   name = input<string>()
-
-   imagePath = computed(() => 'assets/users/' + this.avtar())*/
+  select = output<string>()
 
   // Without signals we can use directly below code but we need to change if we use signals
   get imagePath() {
@@ -34,6 +28,13 @@ export class UserComponent {
 
 
 /*
+ @Output() select = new EventEmitter()
+ */
+//with signal below code
+  /* avtar = input<string>()
+   name = input<string>()
+
+   imagePath = computed(() => 'assets/users/' + this.avtar())
 // Below is traditional way to create object that angular listen when any chagne use zone.js
 // selectedUser = DUMMY_USERS[randomIdx]
 // New way to create signals
